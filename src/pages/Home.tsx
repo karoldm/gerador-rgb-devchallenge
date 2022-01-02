@@ -9,9 +9,18 @@ export function Home() {
   const [green, setGreen] = useState('0');
   const [blue, setBlue] = useState('0');
   const [date, setDate] = useState(new Date());
+  const [theme, setTheme] = useState('darkTheme');
 
   function refreshClock() {
-    setDate(new Date());
+    const date = new Date();
+    setDate(date);
+
+    if (date.getHours() >= 6 && date.getHours() <= 18) {
+      setTheme('lightTheme');
+    }
+    else {
+      setTheme('darkTheme');
+    }
   }
   useEffect(() => {
     const timerId = setInterval(refreshClock, 1000);
@@ -21,13 +30,13 @@ export function Home() {
   }, []);
 
   return (
-    <div className='container'>
+    <div className={`container ${theme}`}>
       <h1>Gerador RGB </h1>
       < div className='date' >
         <img src={icon} alt='pick color icon' />
         <p>{date.toLocaleDateString() + ' - ' + date.toLocaleTimeString()}</p>
       </div>
-      < main >
+      < main>
         <div className='input-container'>
           <div id='red'><input type='range' min='0' max='255' onChange={(e) => setRed(e.target.value)} /></div>
           <div id='green'><input type='range' min='0' max='255' onChange={(e) => setGreen(e.target.value)} /></div>
