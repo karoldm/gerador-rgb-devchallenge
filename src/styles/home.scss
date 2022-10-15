@@ -1,4 +1,4 @@
-.container{
+.container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -8,12 +8,17 @@
   width: 100%;
   padding: 2rem;
 
-  .date{
+  .date {
     width: 60vw;
     display: flex;
+    align-items: center;
     gap: 1rem;
     padding: 1rem;
     border-radius: 3px;
+
+    img {
+      max-width: 2rem;
+    }
   }
 
   main {
@@ -34,23 +39,25 @@
       flex-wrap: wrap;
       gap: 2.5rem;
 
-      #red, #green, #blue {
+      #red,
+      #green,
+      #blue {
         border-radius: 3px;
       }
-  
-      #red{
+
+      #red {
         background: #FF817E;
       }
-  
-      #green{
+
+      #green {
         background: #3FB73D;
       }
-  
-      #blue{
+
+      #blue {
         background: #515AAB;
       }
-  
-      >div{
+
+      >div {
         padding: 1rem;
         display: flex;
         align-items: center;
@@ -58,7 +65,7 @@
       }
     }
 
-    .circle-color{
+    .circle-color {
       width: 10rem;
       height: 10rem;
 
@@ -72,11 +79,14 @@
 .darkTheme {
   background: #363940;
 
-  >div, main {
+  >div,
+  main {
     background: #44474E;
   }
-  
-  h1, p, strong{
+
+  h1,
+  p,
+  strong {
     color: #fff;
   }
 }
@@ -84,11 +94,14 @@
 .lightTheme {
   background: #fff;
 
-  >div, main {
+  >div,
+  main {
     background: #E5E5E5;
   }
-  
-  h1, p, strong{
+
+  h1,
+  p,
+  strong {
     color: #000;
   }
 

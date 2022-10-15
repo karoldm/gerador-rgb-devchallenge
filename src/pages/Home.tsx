@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import '../styles/home.scss';
 
-import icon from '../assets/icon.svg';
+const icon = 'https://cdn-icons-png.flaticon.com/512/719/719747.png';
 
 export function Home() {
   const [red, setRed] = useState('0');
@@ -15,7 +15,7 @@ export function Home() {
     const date = new Date();
     setDate(date);
 
-    if (date.getHours() >= 6 && date.getHours() <= 18) {
+    if (date.getHours() >= 6 && date.getHours() <= 17) {
       setTheme('lightTheme');
     }
     else {
