@@ -1,4 +1,5 @@
-##Gerador RGB
+## Gerador RGB
 
 <br />
-<img src='./asset/print.png' />
+
+<img src='./public/asset/print.png' />
